@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Club"
         tools:targetApi="31">
         <activity
+            android:name=".ModificarUsuarioSocioActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
