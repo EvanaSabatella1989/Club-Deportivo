@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Club</string>
 
+    <string name="ingresar">Ingresar</string>
+
+
     #Botones:
     <string name="boton_aceptar">ACEPTAR</string>
 
@@ -16,4 +19,5 @@
     <string name="valor_telefono">+54 1123456789</string>
     <string name="llave_cuota">Cuota</string>
     <string name="valor_cuota">$5020</string>
+
 </resources>
