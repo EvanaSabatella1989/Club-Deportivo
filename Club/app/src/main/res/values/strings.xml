@@ -1,4 +1,23 @@
 <resources>
     <string name="app_name">Club</string>
+
     <string name="ingresar">Ingresar</string>
+
+
+    #Botones:
+    <string name="boton_aceptar">ACEPTAR</string>
+
+    #ModificarUsuarioActivity:
+    <string name="llave_nombre">Nombre</string>
+    <string name="valor_nombre">Javier Rodriguez</string>
+    <string name="llave_socio">Socio</string>
+    <string name="valor_socio">Activo</string>
+    <string name="llave_fechaNac">Fecha de Nacimiento</string>
+    <string name="llave_domicilio">Domicilio</string>
+    <string name="valor_domicilio">Av.Córdoba 4253, CABA</string>
+    <string name="llave_telefono">Teléfono</string>
+    <string name="valor_telefono">+54 1123456789</string>
+    <string name="llave_cuota">Cuota</string>
+    <string name="valor_cuota">$5020</string>
+
 </resources>

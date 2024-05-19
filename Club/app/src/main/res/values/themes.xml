@@ -2,8 +2,9 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Club" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
+        <item name="colorPrimary">@color/yellow</item>
 
-    <style name="Theme.Club" parent="Base.Theme.Club" />
-</resources>
+      </style>
+
+      <style name="Theme.Club" parent="Base.Theme.Club" />
+  </resources>
