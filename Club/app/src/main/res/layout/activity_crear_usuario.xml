@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="20dp"
+                android:contentDescription="TODO"
+                android:importantForAccessibility="no"
+                android:orientation="horizontal"
+                android:textAlignment="gravity"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="HardcodedText,MissingConstraints,UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:adjustViewBounds="true"
+                    android:importantForAccessibility="no"
+                    android:src="@mipmap/icono_persona"
+                    tools:srcCompat="@mipmap/icono_persona" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/input_background"
+                android:contentDescription="TODO"
+                android:importantForAccessibility="no"
+                android:orientation="horizontal"
+                android:paddingTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="HardcodedText,MissingConstraints,UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10sp"
+                    android:text="@string/llave_nombre"
+                    android:textSize="20sp"
+                    tools:ignore="RtlSymmetry,TextSizeCheck" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="133dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="10sp"
+                    android:text="@string/sin_valor_nombre"
+                    android:textAlignment="gravity"
+                    android:textSize="18sp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry,TextSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/input_background"
+                android:contentDescription="TODO"
+                android:importantForAccessibility="no"
+                android:orientation="horizontal"
+                android:paddingTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="HardcodedText,MissingConstraints,UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:paddingLeft="10sp"
+                    android:text="@string/llave_socio"
+                    android:textSize="20sp"
+                    tools:ignore="RtlSymmetry,TextSizeCheck" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="10sp"
+                    android:text="@string/valor_socio"
+                    android:textAlignment="gravity"
+                    android:textSize="18sp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry,TextSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/input_background"
+                android:contentDescription="TODO"
+                android:importantForAccessibility="no"
+                android:orientation="horizontal"
+                android:paddingTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="HardcodedText,MissingConstraints,UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="219dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:paddingLeft="10sp"
+                    android:text="@string/llave_fechaNac"
+                    android:textSize="20sp"
+                    tools:ignore="RtlSymmetry,TextSizeCheck" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="158dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="10sp"
+                    android:text="@string/valor_fechaNac"
+                    android:textAlignment="gravity"
+                    android:textSize="18sp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry,TextSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/input_background"
+                android:contentDescription="TODO"
+                android:importantForAccessibility="no"
+                android:orientation="horizontal"
+                android:paddingTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="HardcodedText,MissingConstraints,UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:paddingLeft="10sp"
+                    android:text="@string/llave_domicilio"
+                    android:textSize="20sp"
+                    tools:ignore="RtlSymmetry,TextSizeCheck" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="158dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="10sp"
+                    android:text="@string/sin_valor_domicilio"
+                    android:textAlignment="gravity"
+                    android:textSize="18sp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry,TextSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/input_background"
+                android:contentDescription="TODO"
+                android:importantForAccessibility="no"
+                android:orientation="horizontal"
+                android:paddingTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="HardcodedText,MissingConstraints,UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:paddingLeft="10sp"
+                    android:text="@string/llave_telefono"
+                    android:textSize="20sp"
+                    tools:ignore="RtlSymmetry,TextSizeCheck" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="158dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="10sp"
+                    android:text="@string/sin_valor_telefono"
+                    android:textAlignment="gravity"
+                    android:textSize="18sp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry,TextSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/input_background"
+                android:contentDescription="TODO"
+                android:importantForAccessibility="no"
+                android:orientation="horizontal"
+                android:paddingTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="HardcodedText,MissingConstraints,UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:paddingLeft="10sp"
+                    android:text="@string/llave_cuota"
+                    android:textSize="20sp"
+                    tools:ignore="RtlSymmetry,TextSizeCheck" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="158dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="10sp"
+                    android:text="@string/valor_cuota"
+                    android:textAlignment="gravity"
+                    android:textSize="18sp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry,TextSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:contentDescription="TODO"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/boton_grande"
+                    android:text="@string/boton_aceptar"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button6" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
