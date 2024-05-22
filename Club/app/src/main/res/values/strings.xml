@@ -40,5 +40,15 @@
     <string name="valor_apto_fisico">01/01/1990</string>
     <string name="btn_modificar_usuario">Modificar usuario</string>
 
+    #InicioSesionActivity:
+    <string name="inicio_sesion">Inicio de sesión</string>
+    <string name="complete_datos">Complete sus datos para ingresar</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="olvidaste_contrasena">¿Olvidaste tu contraseña?</string>
+
+    #PagoTarjetaActivity:
+    <string name="pago_tarjeta">Pasar tarjeta por el posnet y continuar con el pago por ese medio.</string>
+    <string name="aceptar">ACEPTAR</string>
 
 </resources>

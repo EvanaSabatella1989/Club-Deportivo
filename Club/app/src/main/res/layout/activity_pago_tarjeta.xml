@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PagoTarjeta">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageViewTarjeta"
+            android:layout_width="217dp"
+            android:layout_height="136dp"
+            app:srcCompat="@mipmap/tarjeta"
+            android:layout_marginBottom="40dp"
+            />
+
+        <Spinner
+            android:id="@+id/spinnerPagoTarjeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_background" />
+
+        <TextView
+            android:id="@+id/textViewPagoTarjeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pago_tarjeta"
+            android:textAlignment="center"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="40dp"
+            />
+
+        <Button
+            android:id="@+id/buttonAceptar"
+            android:layout_width="180dp"
+            android:layout_height="48dp"
+            android:background="@drawable/boton_chico"
+            android:text="@string/aceptar"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
