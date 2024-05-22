@@ -13,11 +13,22 @@
         android:theme="@style/Theme.Club"
         tools:targetApi="31">
         <activity
+            android:name=".ElegirActividadNoSocioActivity"
+            android:exported="false"
+            android:label="@string/label_nueva_actividad"
+            />
+        <activity
+            android:name=".DetalleUsuarioSocioActivity"
+            android:exported="false"
+            android:label="@string/llave_socio"/>
+
+        <activity
             android:name=".DetalleBilleteraActivity"
             android:exported="false" />
         <activity
             android:name=".PagoTarjetaActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/label_pago_con_tarjeta" />
         <activity
             android:name=".InicioSesionActivity"
             android:exported="true"
