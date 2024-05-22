@@ -16,10 +16,10 @@
             android:name=".DetalleBilleteraActivity"
             android:exported="false" />
         <activity
-            android:name=".InicioSesionActivity"
+            android:name=".PagoTarjetaActivity"
             android:exported="false" />
         <activity
-            android:name=".PagoTarjetaActivity"
+            android:name=".InicioSesionActivity"
             android:exported="true"
             android:parentActivityName=".MainActivity">
             <intent-filter>

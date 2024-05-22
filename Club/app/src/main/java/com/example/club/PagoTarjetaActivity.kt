@@ -11,7 +11,7 @@ class PagoTarjetaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_pago_tarjeta)
 
         val spinnerCuotas : Spinner = findViewById(R.id.spinnerPagoTarjeta)
-        val listaCuotas = arrayOf("Cantidad de Cuota", "3 cuotas", "6 cuotas")
+        val listaCuotas = arrayOf("Cantidad de Cuotas", "3 cuotas", "6 cuotas")
         val adaptador = ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listaCuotas)
         spinnerCuotas.adapter = adaptador
     }
