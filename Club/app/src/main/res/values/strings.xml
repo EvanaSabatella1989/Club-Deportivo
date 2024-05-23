@@ -37,8 +37,35 @@
     <string name="nombre_no_socio">Carlos Gimenez</string>
     <string name="btn_nueva_actividad">Nueva Actividad</string>
     <string name="llave_apto_fisico">Apto físico</string>
-    <string name="valor_apto_fisico">01/01/1990</string>
+    <string name="valor_apto_fisico">10/10/2023</string>
     <string name="btn_modificar_usuario">Modificar usuario</string>
 
+    #InicioSesionActivity:
+    <string name="inicio_sesion">Inicio de sesión</string>
+    <string name="complete_datos">Complete sus datos para ingresar</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="olvidaste_contrasena">¿Olvidaste tu contraseña?</string>
+
+    #PagoTarjetaActivity:
+    <string name="pago_tarjeta">Pasar tarjeta por el posnet y continuar con el pago por ese medio.</string>
+    <string name="aceptar">ACEPTAR</string>
+    <string name="label_pago_con_tarjeta">Pago con tarjeta</string>
+
+    #DetalleUsuarioActivity:
+    <string name="texto_menu_on_top_socio">Socio</string>
+    <string name="nombre_socio">Javier Rodriguez</string>
+    <string name="btn_ver_carnet">VER CARNET</string>
+    <string name="btn_ver_cuotas">VER CUOTAS</string>
+    <string name="subir_apto_fisico">Subir apto físico</string>
+
+    #ElegirActividadNoSocio:
+    <string name="label_nueva_actividad">Nueva actividad</string>
+    <string name="actividad1">Karate</string>
+    <string name="actividad2">Natación</string>
+    <string name="actividad3">Fútbol</string>
+    <string name="actividad4">Danza</string>
+    <string name="actividad5">Yoga</string>
+    <string name="agregar">+</string>
 
 </resources>
