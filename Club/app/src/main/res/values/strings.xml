@@ -44,5 +44,5 @@
     <string name="actividad3">Fútbol</string>
     <string name="actividad4">Danza</string>
     <string name="actividad5">Yoga</string>
-
+    <string name="agregar">+</string>
 </resources>
