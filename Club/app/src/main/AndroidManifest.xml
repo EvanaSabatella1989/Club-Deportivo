@@ -12,6 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Club"
         tools:targetApi="31">
+
+        <activity
+            android:name=".PagoEfectivo"
+            android:exported="false" />
+        <activity
+            android:name=".ListaCuotaSocios"
+            android:exported="false" />
+        <activity
+            android:name=".ListaUsuarios"
+            android:exported="false" />
+        <activity
+            android:name=".BilleterasVirtuales"
+            android:exported="false" />
         <activity
 
             android:name=".ElegirActividadNoSocioActivity"

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ListaUsuarios">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="8dp">
+
+      <EditText
+      android:id="@+id/search_user"
+      android:layout_width="306dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      android:drawableStart="@android:drawable/ic_menu_search"
+      android:hint="Buscar usuario"
+      android:padding="10dp" />
+
+        <ImageButton
+            android:id="@+id/button_add"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/add"
+            android:src="@drawable/baseline_add_box_24" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/icon_usuario1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/socio_color" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:id="@+id/text_nombre_usuario1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Javier Rodríguez"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_estado_usuario1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usuario"
+                android:textColor="@android:color/holo_green_dark" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/icon_usuario2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/no_socio_sincolor" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:id="@+id/text_nombre_usuario2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mariano Cortez"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_estado_usuario2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deudor"
+                android:textColor="@android:color/holo_red_dark" />
+        </LinearLayout>
+    </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/icon_usuario3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/socio_color" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="8dp">
+
+                    <TextView
+                        android:id="@+id/text_nombre_usuario3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Miguel Angel"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/text_estado_usuario3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Usuario"
+                        android:textColor="@android:color/holo_green_dark" />
+                </LinearLayout>
+            </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/icon_usuario4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/socio_color" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:id="@+id/text_nombre_usuario4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pablo Murias"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_estado_usuario4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usuario"
+                android:textColor="@android:color/holo_green_dark" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/icon_usuario5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/socia_color" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:id="@+id/text_nombre_usuario5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ana Libedinsky"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_estado_usuario5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usuario"
+                android:textColor="@android:color/holo_green_dark" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/icon_usuario6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/socio_color" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:id="@+id/text_nombre_usuario6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Juan Carlos Lopez"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_estado_usuario6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usuario"
+                android:textColor="@android:color/holo_green_dark" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/icon_usuario7"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/no_socia_sincolor" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:id="@+id/text_nombre_usuario7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Andrea Gomez"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_estado_usuario7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deudor"
+                android:textColor="@android:color/holo_red_dark" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/icon_usuario8"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/socia_color" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:id="@+id/text_nombre_usuario8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Denise Soldati"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_estado_usuario8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usuario"
+                android:textColor="@android:color/holo_green_dark" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
