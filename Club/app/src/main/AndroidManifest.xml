@@ -13,6 +13,7 @@
         android:theme="@style/Theme.Club"
         tools:targetApi="31">
         <activity
+
             android:name=".ElegirActividadNoSocioActivity"
             android:exported="false"
             android:label="@string/label_nueva_actividad"
@@ -32,13 +33,49 @@
         <activity
             android:name=".InicioSesionActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".CarnetActivity"
+            android:exported="true" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+            <meta-data
+                android:name="preloaded_fonts"
+                android:resource="@array/preloaded_fonts" />
+    </activity>
+    <meta-data
+        android:name="preloaded_fonts"
+        android:resource="@array/preloaded_fonts" />
+        <activity
+            android:name=".SeleccionFomaPagoActivity"
+            android:exported="false"/>
+
+
+
+
+
+        <activity
+            android:name=".ModificarUsuarioSocioActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".InicioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ABMActividadesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".modificar_usuario_nosocio_Activity"
+            android:exported="true"/>
+
+
     </application>
 
 </manifest>
