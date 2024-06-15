@@ -7,6 +7,7 @@
     #Botones:
     <string name="boton_aceptar">ACEPTAR</string>
 
+
     #ModificarUsuarioActivity:
     #detalleUsuarioNoSocioActivity:
     #crearUsuarioActivity:
@@ -40,6 +41,7 @@
     <string name="valor_apto_fisico">10/10/2023</string>
     <string name="btn_modificar_usuario">Modificar usuario</string>
 
+
     #InicioSesionActivity:
     <string name="inicio_sesion">Inicio de sesión</string>
     <string name="complete_datos">Complete sus datos para ingresar</string>
@@ -67,5 +69,20 @@
     <string name="actividad4">Danza</string>
     <string name="actividad5">Yoga</string>
     <string name="agregar">+</string>
+
+    <string name="llave_importe_final">Importe Final</string>
+    <string name="valor_importe_final">$ 9950,00</string>
+    <string name="llave_tarjeta">Tarjeta Débito /Crédito</string>
+    <string name="valor_flecha"><![CDATA[>]]></string>
+    <string name="llave_billetera_v">Billetera Virtual</string>
+    <string name="llave_efectivo">Efectivo</string>
+    <string name="llave_num_soc">Socio N°:</string>
+    <string name="valor_num_soc">1022</string>
+    <string name="llave_fechaVen">Vencimiento:</string>
+    <string name="valor_fechaVen">12/10/2024</string>
+    <string name="valor_dni">48.912.843</string>
+    <string name="llave_dni">D.N.I.:</string>
+    <string name="boton_imprimir">IMPRIMIR</string>
+
 
 </resources>
