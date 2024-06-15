@@ -85,4 +85,19 @@
     <string name="boton_imprimir">IMPRIMIR</string>
 
 
+    #ArrayPagoEfectivo
+    <string-array name="cuotas_array">
+        <item> 1 cuota </item>
+        <item> 2 cuotas </item>
+        <item> 3 cuotas </item>
+        <item> 4 cuotas </item>
+        <item> 5 cuotas </item>
+    </string-array>
+
+
+    <string name="app_name">Club</string>
+    <string name="edit">Editar</string>
+    <string name="add">Agregar</string>
+
+
 </resources>
