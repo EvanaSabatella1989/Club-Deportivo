@@ -38,11 +38,7 @@
             android:name=".CarnetActivity"
             android:exported="true" >
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <meta-data
                 android:name="preloaded_fonts"
                 android:resource="@array/preloaded_fonts" />
@@ -60,8 +56,14 @@
 
         <activity
             android:name=".ModificarUsuarioSocioActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true" />
@@ -73,8 +75,9 @@
             android:exported="true" />
         <activity
             android:name=".modificar_usuario_nosocio_Activity"
-            android:exported="true"/>
+            android:exported="true">
 
+       </activity>
 
     </application>
 
