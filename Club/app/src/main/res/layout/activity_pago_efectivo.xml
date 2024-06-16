@@ -36,7 +36,7 @@
         android:textAlignment="center"/>
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btnVerCarnet"
         android:layout_width="180dp"
         android:layout_height="48dp"
         android:layout_below="@id/textView"

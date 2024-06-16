@@ -1,6 +1,8 @@
 package com.example.club
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +18,14 @@ class ABMActividadesActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }*/
+
+        val btn: Button = findViewById(R.id.btnActividadNueva)
+        val btnEdit: Button = findViewById(R.id.buttonEdit1)
+
+        btnEdit.setOnClickListener {
+            val intent: Intent = Intent(this, popupDetalleActividadActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

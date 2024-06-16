@@ -161,7 +161,13 @@
                     android:layout_marginStart="20dp"
                     android:layout_gravity="center_vertical"
                     android:textSize="16sp" />
-
+                <ImageView
+                    android:id="@+id/imageCalendar"
+                    android:layout_width="24dp"
+                    android:layout_marginStart="45dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/icon_calendar" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -295,7 +301,7 @@
 
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btnActualizar"
                 android:layout_width="192dp"
                 android:layout_height="47dp"
                 android:layout_gravity="center_horizontal"
