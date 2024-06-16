@@ -13,6 +13,7 @@ class MenuPrincipalActivity : AppCompatActivity() {
         val btnUsuarios: Button = findViewById(R.id.btnUsuarios)
         val btnActividades: Button = findViewById(R.id.btnActividades)
         val btnCuotas: Button = findViewById(R.id.btnCuotas)
+        val btnSalir: Button = findViewById(R.id.btnSalir)
 
         btnUsuarios.setOnClickListener {
             val intent: Intent = Intent(this, ListaUsuarios::class.java)
@@ -26,6 +27,11 @@ class MenuPrincipalActivity : AppCompatActivity() {
 
         btnCuotas.setOnClickListener {
             val intent: Intent = Intent(this, ListaDeCuotasActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnSalir.setOnClickListener {
+            val intent: Intent = Intent(this, InicioSesionActivity::class.java)
             startActivity(intent)
         }
     }
