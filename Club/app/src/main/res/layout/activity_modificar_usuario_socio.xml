@@ -40,8 +40,8 @@
         app:layout_constraintStart_toStartOf="parent" />  -->
 
     <ScrollView
-        android:layout_width="411dp"
-        android:layout_height="731dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -49,250 +49,271 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/imageView2"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="60dp"
-            android:layout_marginBottom="60dp"
-            android:minWidth="200dp"
-            android:minHeight="200dp"
-            android:src="@mipmap/icono_persona" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_margin="30dp"
             android:layout_marginBottom="30dp"
-
-            android:orientation="horizontal">
-
-
-            <TextView
-                android:layout_width="152dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="0dp"
-                android:tag=""
-                android:text="@string/llave_nombre"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="152dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="0dp"
-                android:tag=""
-                android:text="@string/valor_nombre"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+            android:orientation="vertical">
 
 
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginBottom="40dp"
+                android:minWidth="10dp"
+                android:minHeight="10dp"
+                android:src="@mipmap/fotousuario" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/input_background"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingRight="0dp"
+                    android:tag=""
+                    android:text="@string/llave_nombre"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end"
+                    android:paddingRight="0dp"
+                    android:tag=""
+                    android:text="@string/valor_nombre"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/input_background"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag=""
+                    android:text="@string/llave_socio"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="0dp"
+                    android:tag=""
+                    android:text="@string/valor_socio"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="16sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/input_background"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="0dp"
+                    android:tag=""
+                    android:text="@string/llave_fechaNac"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp" />
+                <ImageView
+                    android:id="@+id/imageCalendar"
+                    android:layout_width="24dp"
+                    android:layout_marginStart="45dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/icon_calendar" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="0dp"
+                    android:tag=""
+                    android:text="Fecha"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="16sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/input_background"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="0dp"
+                    android:tag=""
+                    android:text="@string/llave_domicilio"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="0dp"
+                    android:tag=""
+                    android:text="@string/valor_domicilio"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="16sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/input_background"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="0dp"
+                    android:tag=""
+                    android:text="@string/llave_telefono"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="0dp"
+                    android:tag=""
+                    android:text="@string/valor_telefono"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="16sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/input_background"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="0dp"
+                    android:tag=""
+                    android:text="@string/llave_cuota"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="0dp"
+                    android:tag=""
+                    android:text="@string/valor_cuota"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="16sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end"/>
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnActualizar"
+                android:layout_width="192dp"
+                android:layout_height="47dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginBottom="60dp"
+                android:background="@drawable/boton_chico"
+                android:text="@string/boton_aceptar"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginBottom="30dp"
-            android:backgroundTint="@color/yellow"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="152dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="0dp"
-                android:tag=""
-                android:text="@string/llave_socio"
-                android:textAlignment="center"
-                android:textSize="22sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:layout_width="152dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="0dp"
-                android:tag=""
-                android:text="@string/valor_socio"
-                android:textAlignment="center"
-                android:textSize="22sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginBottom="30dp"
-            android:backgroundTint="@color/yellow"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="152dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="0dp"
-                android:tag=""
-                android:text="@string/llave_fechaNac"
-                android:textAlignment="center"
-                android:textSize="22sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:layout_width="152dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="0dp"
-                android:tag=""
-                android:text="Fecha"
-                android:textAlignment="center"
-                android:textSize="22sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginBottom="30dp"
-            android:backgroundTint="@color/yellow"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="152dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="0dp"
-                android:tag=""
-                android:text="@string/llave_domicilio"
-                android:textAlignment="center"
-                android:textSize="22sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:layout_width="152dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="0dp"
-                android:tag=""
-                android:text="@string/valor_domicilio"
-                android:textAlignment="center"
-                android:textSize="22sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginBottom="30dp"
-            android:backgroundTint="@color/yellow"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="152dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="0dp"
-                android:tag=""
-                android:text="@string/llave_telefono"
-                android:textAlignment="center"
-                android:textSize="22sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:layout_width="152dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="0dp"
-                android:tag=""
-                android:text="@string/valor_telefono"
-                android:textAlignment="center"
-                android:textSize="22sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginBottom="30dp"
-            android:backgroundTint="@color/yellow"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="152dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="0dp"
-                android:tag=""
-                android:text="@string/llave_cuota"
-                android:textAlignment="center"
-                android:textSize="22sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:layout_width="152dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="0dp"
-                android:tag=""
-                android:text="@string/valor_cuota"
-                android:textAlignment="center"
-                android:textSize="22sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-
-
-        </LinearLayout>
-
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="192dp"
-            android:layout_height="47dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginRight="100dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/boton_chico"
-            android:text="@string/boton_aceptar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-    </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

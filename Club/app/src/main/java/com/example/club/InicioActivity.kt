@@ -20,7 +20,7 @@ class InicioActivity : AppCompatActivity() {
         }*/
         val btn: Button= findViewById(R.id.button_ir)
         btn.setOnClickListener {
-            val intent: Intent = Intent(this, MainActivity::class.java)
+            val intent: Intent = Intent(this, InicioSesionActivity::class.java)
             startActivity(intent)
         }
     }

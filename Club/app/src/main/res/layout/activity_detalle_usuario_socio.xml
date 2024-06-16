@@ -76,7 +76,7 @@
                 >
 
                 <Button
-                    android:id="@+id/button8"
+                    android:id="@+id/btnVerCarnet"
                     android:layout_width="160dp"
                     android:layout_height="48dp"
                     android:background="@drawable/boton_grande"
@@ -256,7 +256,7 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <Button
-                    android:id="@+id/button5"
+                    android:id="@+id/btnNuevaActividad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/boton_grande"
@@ -359,7 +359,7 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <Button
-                    android:id="@+id/button6"
+                    android:id="@+id/btnModificar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/boton_grande"
@@ -367,7 +367,7 @@
                     android:textColor="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/button6" />
+                    app:layout_constraintTop_toBottomOf="@+id/btnModificar" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

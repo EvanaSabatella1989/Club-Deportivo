@@ -25,7 +25,7 @@
         />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnUsuarios"
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
@@ -39,7 +39,7 @@
 
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnActividades"
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
@@ -48,10 +48,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+        app:layout_constraintTop_toBottomOf="@+id/btnUsuarios" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnCuotas"
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
@@ -60,10 +60,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/btnActividades" />
 
     <Button
-        android:id="@+id/button_ir"
+        android:id="@+id/btnSalir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -72,7 +72,7 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCuotas" />
 
 
 

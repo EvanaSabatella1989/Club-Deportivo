@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -9,68 +10,190 @@
 
 
     <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/gridLayout"
+        android:layout_width="392dp"
+        android:layout_height="199dp"
         android:layout_margin="16dp"
+        android:layout_marginTop="100dp"
         android:columnCount="2"
         android:rowCount="3"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="34dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <LinearLayout
+            android:layout_width="191dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10sp"
+            android:orientation="vertical">
 
+            <LinearLayout
+                android:id="@+id/itemMp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginBottom="10sp"
+                android:background="@drawable/input_background_chico"
+                android:orientation="horizontal">
 
-        <Button
-            android:layout_width="30dp"
-            android:layout_height="97dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@mipmap/logo_mercado_pago" />
+                <ImageView
+                    android:id="@+id/imgMp"
+                    android:layout_width="50dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/mp_sirve" />
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="92dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@mipmap/logo_modo" />
+                <TextView
+                    android:id="@+id/txtMp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Mercado Pago" />
+            </LinearLayout>
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="86dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@mipmap/logo_naranja" />
+            <LinearLayout
+                android:id="@+id/itemModo"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10sp"
+                android:background="@drawable/input_background_chico"
+                android:orientation="horizontal">
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="68dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@mipmap/logo_uala"/>
+                <ImageView
+                    android:id="@+id/imgModo"
+                    android:layout_width="50dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/modo" />
 
-        <Button
-            android:layout_width="7dp"
-            android:layout_height="71dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@mipmap/logo_paypal" />
+                <TextView
+                    android:id="@+id/txtModo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Modo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/itemNaranja"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10sp"
+                android:background="@drawable/input_background_chico"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgNaranja"
+                    android:layout_width="50dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/naranja" />
+
+                <TextView
+                    android:id="@+id/txtNaranja"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Tarjeta Naranja" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="172dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/itemPay"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10sp"
+                android:background="@drawable/input_background_chico"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgPay"
+                    android:layout_width="50dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/mp_sirve" />
+
+                <TextView
+                    android:id="@+id/txtPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Paypal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/itemUala"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10sp"
+                android:background="@drawable/input_background_chico"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgUala"
+                    android:layout_width="50dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/paypal" />
+
+                <TextView
+                    android:id="@+id/txtUala"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Ualá" />
+            </LinearLayout>
+        </LinearLayout>
 
 
     </GridLayout>
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btnVerCarnet"
         android:layout_width="180dp"
         android:layout_height="48dp"
+        android:layout_marginTop="56dp"
         android:background="@drawable/boton_chico"
         android:text="@string/boton_volver"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="416dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:text="Billeteras Virtuales"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.485" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
