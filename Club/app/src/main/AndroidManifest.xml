@@ -14,51 +14,63 @@
         tools:targetApi="31">
         <activity
             android:name=".popupDetalleActividadActivity"
-            android:exported="true" >
+            android:exported="true"
+            android:parentActivityName=".MenuPrincipalActivity">
 
         </activity>
         <activity
             android:name=".ListaDeCuotasActivity"
-            android:exported="true">
+            android:exported="true"
+            android:parentActivityName=".MenuPrincipalActivity">
 
         </activity>
 
         <activity
             android:name=".PagoEfectivo"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MenuPrincipalActivity"/>
         <activity
             android:name=".ListaCuotaSocios"
-            android:exported="true"></activity>
+            android:exported="true"
+            android:parentActivityName=".MenuPrincipalActivity"></activity>
         <activity
             android:name=".ListaUsuarios"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MenuPrincipalActivity"/>
         <activity
             android:name=".BilleterasVirtuales"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MenuPrincipalActivity"/>
         <activity
             android:name=".ElegirActividadNoSocioActivity"
             android:exported="false"
-            android:label="@string/label_nueva_actividad" />
+            android:label="@string/label_nueva_actividad"
+            android:parentActivityName=".MenuPrincipalActivity"/>
         <activity
             android:name=".DetalleUsuarioSocioActivity"
             android:exported="false"
-            android:label="@string/llave_socio" />
+            android:label="@string/llave_socio"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".DetalleUsuarioNoSocioActivity"
-            android:exported="false"/>
+            android:exported="false"
+            android:parentActivityName=".MenuPrincipalActivity"/>
         <activity
             android:name=".DetalleBilleteraActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MenuPrincipalActivity"/>
         <activity
             android:name=".PagoTarjetaActivity"
             android:exported="false"
-            android:label="@string/label_pago_con_tarjeta" />
+            android:label="@string/label_pago_con_tarjeta"
+            android:parentActivityName=".MenuPrincipalActivity"/>
         <activity
             android:name=".InicioSesionActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity" />
+            android:theme="@style/Theme.Club.NoTheme"/>
         <activity
             android:name=".CarnetActivity"
-            android:exported="true">
+            android:exported="true"
+            android:parentActivityName=".MenuPrincipalActivity">
             <meta-data
                 android:name="preloaded_fonts"
                 android:resource="@array/preloaded_fonts" />
@@ -70,17 +82,19 @@
 
         <activity
             android:name=".SeleccionFomaPagoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MenuPrincipalActivity"/>
         <activity
             android:name=".ModificarUsuarioSocioActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MenuPrincipalActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".InicioActivity"
-            android:exported="true" >
+            android:exported="true"
+            android:theme="@style/Theme.Club.NoTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -89,16 +103,20 @@
         </activity>
         <activity
             android:name=".ABMActividadesActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MenuPrincipalActivity"/>
         <activity
             android:name=".modificar_usuario_nosocio_Activity"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MenuPrincipalActivity"/>
 
         <activity android:name=".MenuPrincipalActivity"
-            android:exported="false"/>
+            android:exported="false"
+            android:theme="@style/Theme.Club.NoTheme"/>
 
         <activity android:name=".CrearUsuario"
-            android:exported="false"/>
+            android:exported="false"
+            android:parentActivityName=".MenuPrincipalActivity"/>
     </application>
 
 </manifest>

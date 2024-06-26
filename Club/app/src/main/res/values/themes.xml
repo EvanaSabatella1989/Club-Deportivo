@@ -6,4 +6,10 @@
       </style>
 
       <style name="Theme.Club" parent="Base.Theme.Club" />
+
+    <style name="Theme.Club.NoTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Personalizaciones del tema específico -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorAccent">@color/black</item>
+    </style>
   </resources>
