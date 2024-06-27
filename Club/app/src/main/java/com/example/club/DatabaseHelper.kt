@@ -3,11 +3,12 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.example.club.models.Actividad
 
 class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION)  {
     companion object {
         private const val DATABASE_NAME = "ClubDatabase.db"
-        private const val DATABASE_VERSION = 2
+        private const val DATABASE_VERSION = 1
         private const val TABLE_USERS = "User"
         private const val COLUMN_ID = "id"
         private const val COLUMN_USERNAME = "username"
@@ -30,17 +31,38 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
         db.execSQL(CREATE_CUOTA_TABLE)
         db.execSQL(CREATE_ACTIVIDAD_TABLE)
         db.execSQL(CREATE_NOSOCIOACTIVIDAD_TABLE)
+        //carga del usuario:
         val adminValues = ContentValues().apply {
             put(COLUMN_USERNAME, "clubdeportivo")
             put(COLUMN_PASSWORD, "admin12345")
         }
-        val activityValues = ContentValues().apply {
-            put("nombre","Voley")
-            put("costo", 50.00)
-        }
-        //db.execSQL("INSERT INTO actividad (idActividad, nombre, costo) VALUES (1, 'Yoga', 50.00);")
         db.insert(TABLE_USERS, null, adminValues)
-        db.insert("actividad", null, activityValues)
+
+        //carga de las actividades:
+        val actividades = listOf(
+            Pair("Basquet", 500.00),
+            Pair("Natación", 400.00),
+            Pair("Futbol", 600.00),
+            Pair("Karate", 700.00),
+            Pair("Danza", 400.00),
+            Pair("Yoga", 500.00)
+        )
+        db.beginTransaction()
+        try {
+            for (actividad in actividades) {
+                val activityValues = ContentValues().apply {
+                    put("nombre", actividad.first)
+                    put("costo", actividad.second)
+                }
+                db.insert("actividad", null, activityValues)
+            }
+            db.setTransactionSuccessful()  // Marca la transacción como exitosa
+        } catch (e: Exception) {
+            // Manejo de errores
+            e.printStackTrace()
+        } finally {
+            db.endTransaction()  // Finaliza la transacción
+        }
 
     }
 
@@ -64,6 +86,27 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
         cursor.close()
         //db.close()
         return isValid
+    }
+
+    fun traerDatosActividades():MutableList<Actividad> {
+        var listaActividades : MutableList<Actividad> = ArrayList()
+        readableDatabase.use { db ->
+            val sql = "SELECT * FROM actividad"
+            db.rawQuery(sql, null).use { cursor ->
+                if (cursor.moveToFirst()) {
+                    do {
+                        val idActividad = cursor.getInt(cursor.getColumnIndexOrThrow("idActividad"))
+                        val nombre = cursor.getString(cursor.getColumnIndexOrThrow("nombre"))
+                        val costo = cursor.getDouble(cursor.getColumnIndexOrThrow("costo"))
+
+                        val act = Actividad(idActividad, nombre, costo)
+                        listaActividades.add(act)
+                    } while (cursor.moveToNext())
+                }
+            }
+        }
+
+        return listaActividades
     }
 
 

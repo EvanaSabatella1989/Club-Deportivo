@@ -77,12 +77,11 @@
                         android:layout_height="48dp"
                         android:background="@drawable/input_background"
                         android:ems="10"
+                        android:hint="@string/usuario"
                         android:inputType="text"
-                        android:text="@string/usuario"
-                        android:textColor="@color/light_grey"
-                        android:textSize="14sp"
                         android:paddingStart="10dp"
-                        />
+                        android:textColor="@color/light_grey"
+                        android:textSize="14sp" />
                 </LinearLayout>
 
                 <LinearLayout
