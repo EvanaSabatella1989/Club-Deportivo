@@ -50,7 +50,8 @@
     <string name="inicio_sesion">Inicio de sesión</string>
     <string name="complete_datos">Complete sus datos para ingresar</string>
     <string name="usuario">Usuario</string>
-    <string name="contrasena">Contraseña</string>
+    <string name="contrasena">***********</string>
+    <string name="contrasenaHelp">Contraseña</string>
     <string name="olvidaste_contrasena">¿Olvidaste tu contraseña?</string>
 
     #PagoTarjetaActivity:
