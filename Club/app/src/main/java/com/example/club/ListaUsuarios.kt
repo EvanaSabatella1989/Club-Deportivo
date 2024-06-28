@@ -49,6 +49,10 @@ class ListaUsuarios : AppCompatActivity() {
                 val intent = Intent(this, DetalleUsuarioSocioActivity::class.java).apply {
                     putExtra("nombre", persona.nombre)
                     putExtra("apellido", persona.apellido)
+                    putExtra("fechaNac", persona.fechaNac)
+                    putExtra("domicilio", persona.domicilio)
+                    putExtra("telefono", persona.telefono)
+                    putExtra("aptoFisico", if(persona.aptoFisico) 1 else 0)
                 }
                 startActivity(intent)
             } else {
@@ -56,6 +60,10 @@ class ListaUsuarios : AppCompatActivity() {
                 val intent = Intent(this, DetalleUsuarioNoSocioActivity::class.java).apply {
                     putExtra("nombre", persona.nombre)
                     putExtra("apellido", persona.apellido)
+                    putExtra("fechaNac", persona.fechaNac)
+                    putExtra("domicilio", persona.domicilio)
+                    putExtra("telefono", persona.telefono)
+                    putExtra("aptoFisico", if(persona.aptoFisico) 1 else 0)
                 }
                 startActivity(intent)
             }

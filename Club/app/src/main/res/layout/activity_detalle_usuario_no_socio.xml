@@ -43,7 +43,7 @@
                     tools:srcCompat="@mipmap/fotousuario" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/textViewNombre"
                     android:layout_width="182dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -91,7 +91,7 @@
                     tools:ignore="RtlSymmetry,TextSizeCheck" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/textViewFechaNac"
                     android:layout_width="133dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -131,7 +131,7 @@
                     tools:ignore="RtlSymmetry,TextSizeCheck" />
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/textViewDomicilio"
                     android:layout_width="158dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -171,7 +171,7 @@
                     tools:ignore="RtlSymmetry,TextSizeCheck" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/textViewTelefono"
                     android:layout_width="158dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
