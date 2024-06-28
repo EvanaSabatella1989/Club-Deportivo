@@ -71,18 +71,96 @@
                     android:textSize="20sp"
                     tools:ignore="RtlSymmetry,TextSizeCheck" />
 
-                <TextView
+                <EditText
                     android:id="@+id/textView5"
                     android:layout_width="133dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
                     android:paddingRight="10sp"
-                    android:text="@string/sin_valor_nombre"
+                    android:hint="@string/sin_valor_nombre"
                     android:textAlignment="gravity"
                     android:textSize="18sp"
                     tools:ignore="RtlHardcoded,RtlSymmetry,TextSizeCheck" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/input_background"
+                android:contentDescription="TODO"
+                android:importantForAccessibility="no"
+                android:orientation="horizontal"
+                android:paddingTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="HardcodedText,MissingConstraints,UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:paddingLeft="10sp"
+                    android:text="@string/llave_apellido"
+                    android:textSize="20sp"
+                    tools:ignore="RtlSymmetry,TextSizeCheck" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="158dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="10sp"
+                    android:text="@string/sin_valor_apellido"
+                    android:textAlignment="gravity"
+                    android:textSize="18sp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry,TextSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/input_background"
+                android:contentDescription="TODO"
+                android:importantForAccessibility="no"
+                android:orientation="horizontal"
+                android:paddingTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="HardcodedText,MissingConstraints,UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:paddingLeft="10sp"
+                    android:text="@string/llave_dni"
+                    android:textSize="20sp"
+                    tools:ignore="RtlSymmetry,TextSizeCheck" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="158dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="10sp"
+                    android:text="@string/sin_valor_dni"
+                    android:textAlignment="gravity"
+                    android:textSize="18sp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry,TextSizeCheck" />
             </LinearLayout>
 
             <LinearLayout
@@ -244,44 +322,7 @@
                     tools:ignore="RtlHardcoded,RtlSymmetry,TextSizeCheck" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="30dp"
-                android:background="@drawable/input_background"
-                android:contentDescription="TODO"
-                android:importantForAccessibility="no"
-                android:orientation="horizontal"
-                android:paddingTop="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="HardcodedText,MissingConstraints,UseCompoundDrawables">
 
-                <TextView
-                    android:id="@+id/textView14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="start"
-                    android:paddingLeft="10sp"
-                    android:text="@string/llave_cuota"
-                    android:textSize="20sp"
-                    tools:ignore="RtlSymmetry,TextSizeCheck" />
-
-                <TextView
-                    android:id="@+id/textView15"
-                    android:layout_width="158dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:paddingRight="10sp"
-                    android:text="@string/valor_cuota"
-                    android:textAlignment="gravity"
-                    android:textSize="18sp"
-                    tools:ignore="RtlHardcoded,RtlSymmetry,TextSizeCheck" />
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

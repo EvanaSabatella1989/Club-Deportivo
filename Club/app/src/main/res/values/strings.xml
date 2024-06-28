@@ -18,6 +18,9 @@
     <string name="llave_nombre">Nombre</string>
     <string name="valor_nombre">Javier Rodriguez</string>
     <string name="sin_valor_nombre">nombre y Apellido</string>
+    <string name="llave_apellido">Apellido</string>
+    <string name="valor_apellido">Javier Rodriguez</string>
+    <string name="sin_valor_apellido">Apellido</string>
     <string name="llave_socio">Socio</string>
     <string name="valor_socio">Activo</string>
     <string name="llave_fechaNac">Fecha de Nacimiento</string>
@@ -30,6 +33,8 @@
     <string name="sin_valor_telefono">+## #### ####</string>
     <string name="llave_cuota">Cuota</string>
     <string name="valor_cuota">$5020</string>
+
+    <string name="sin_valor_dni">DNI</string>
 
     #menuPrincipalActivity:
     <string name="option_menu_principalUsuarios">Usuarios</string>

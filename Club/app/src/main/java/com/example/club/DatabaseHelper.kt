@@ -8,16 +8,16 @@ import com.example.club.models.Actividad
 class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION)  {
     companion object {
         private const val DATABASE_NAME = "ClubDatabase.db"
-        private const val DATABASE_VERSION = 3
+        private const val DATABASE_VERSION = 1
         private const val TABLE_USERS = "User"
         private const val COLUMN_ID = "id"
         private const val COLUMN_USERNAME = "username"
         private const val COLUMN_PASSWORD = "password"
 
-        private const val CREATE_PERSONA_TABLE = "CREATE TABLE persona " + "(idPersona INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, apellido TEXT, fechaNac DATE, dni INTEGER, isSocio TINYINT, aptoFisico TINYINT)"
+        private const val CREATE_PERSONA_TABLE = "CREATE TABLE persona " + "(idPersona INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, apellido TEXT, fechaNac DATE, dni TEXT, domicilio TEXT, telefono TEXT, isSocio TINYINT, aptoFisico TINYINT)"
         //private const val CREATE_SOCIO_TABLE = "CREATE TABLE socio " + "(idSocio INTEGER PRIMARY KEY AUTOINCREMENT, idPersona INTEGER, FOREIGN KEY (idPersona) REFERENCES persona(idPersona))"
         //private const val CREATE_NOSOCIO_TABLE = "CREATE TABLE nosocio " + "(idNoSocio INTEGER PRIMARY KEY AUTOINCREMENT, idPersona INTEGER, FOREIGN KEY (idPersona) REFERENCES persona(idPersona))"
-        private const val CREATE_CUOTA_TABLE = "CREATE TABLE cuota " + "(idCuota INTEGER PRIMARY KEY AUTOINCREMENT, idSocio INTEGER, monto FLOAT, fechaVencimiento DATE, periodo TEXT, medioPago TEXT, fechaEmision DATE, FOREIGN KEY (idPersona) REFERENCES persona(idPersona))"
+        private const val CREATE_CUOTA_TABLE = "CREATE TABLE cuota " + "(idCuota INTEGER PRIMARY KEY AUTOINCREMENT, idPersona INTEGER, monto FLOAT, fechaVencimiento DATE, periodo TEXT, medioPago TEXT, fechaEmision DATE, FOREIGN KEY (idPersona) REFERENCES persona(idPersona))"
         private const val CREATE_ACTIVIDAD_TABLE = "CREATE TABLE actividad " + "(idActividad INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, costo FLOAT)"
         private const val CREATE_PERSONAACTIVIDAD_TABLE = "CREATE TABLE personaactividad " + "(idPersona INTEGER, idActividad INTEGER, PRIMARY KEY (idPersona, idActividad), FOREIGN KEY (idPersona) REFERENCES persona(idPersona), FOREIGN KEY (idActividad) REFERENCES actividad(idActividad))"
     }
