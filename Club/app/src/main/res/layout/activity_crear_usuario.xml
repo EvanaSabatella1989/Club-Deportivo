@@ -79,8 +79,10 @@
                     android:gravity="right"
                     android:paddingRight="10sp"
                     android:hint="@string/sin_valor_nombre"
+                    android:textColorHint="#B0B0B0"
                     android:textAlignment="gravity"
                     android:textSize="18sp"
+                    android:minHeight="48dp"
                     tools:ignore="RtlHardcoded,RtlSymmetry,TextSizeCheck" />
 
             </LinearLayout>
@@ -111,16 +113,18 @@
                     android:textSize="20sp"
                     tools:ignore="RtlSymmetry,TextSizeCheck" />
 
-                <TextView
+                <EditText
                     android:id="@+id/textView15"
                     android:layout_width="158dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
                     android:paddingRight="10sp"
-                    android:text="@string/sin_valor_apellido"
+                    android:hint="@string/sin_valor_apellido"
+                    android:textColorHint="#B0B0B0"
                     android:textAlignment="gravity"
                     android:textSize="18sp"
+                    android:minHeight="48dp"
                     tools:ignore="RtlHardcoded,RtlSymmetry,TextSizeCheck" />
             </LinearLayout>
 
@@ -140,7 +144,7 @@
                 tools:ignore="HardcodedText,MissingConstraints,UseCompoundDrawables">
 
                 <TextView
-                    android:id="@+id/textView14"
+                    android:id="@+id/textView16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -150,16 +154,18 @@
                     android:textSize="20sp"
                     tools:ignore="RtlSymmetry,TextSizeCheck" />
 
-                <TextView
-                    android:id="@+id/textView15"
+                <EditText
+                    android:id="@+id/textView17"
                     android:layout_width="158dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
                     android:paddingRight="10sp"
-                    android:text="@string/sin_valor_dni"
+                    android:hint="@string/sin_valor_dni"
+                    android:textColorHint="#B0B0B0"
                     android:textAlignment="gravity"
                     android:textSize="18sp"
+                    android:minHeight="48dp"
                     tools:ignore="RtlHardcoded,RtlSymmetry,TextSizeCheck" />
             </LinearLayout>
 
@@ -189,17 +195,14 @@
                     android:textSize="20sp"
                     tools:ignore="RtlSymmetry,TextSizeCheck" />
 
-                <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="200dp"
+                <CheckBox
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:paddingRight="10sp"
-                    android:text="@string/valor_socio"
-                    android:textAlignment="gravity"
-                    android:textSize="18sp"
-                    tools:ignore="RtlHardcoded,RtlSymmetry,TextSizeCheck" />
+                    android:layout_gravity="end"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    android:layout_marginEnd="10dp"/>
 
             </LinearLayout>
 
@@ -229,16 +232,18 @@
                     android:textSize="20sp"
                     tools:ignore="RtlSymmetry,TextSizeCheck" />
 
-                <TextView
+                <EditText
                     android:id="@+id/textView9"
                     android:layout_width="158dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
                     android:paddingRight="10sp"
-                    android:text="@string/valor_fechaNac"
+                    android:hint="@string/valor_fechaNac"
+                    android:textColorHint="#B0B0B0"
                     android:textAlignment="gravity"
                     android:textSize="18sp"
+                    android:minHeight="48dp"
                     tools:ignore="RtlHardcoded,RtlSymmetry,TextSizeCheck" />
 
             </LinearLayout>
@@ -269,16 +274,18 @@
                     android:textSize="20sp"
                     tools:ignore="RtlSymmetry,TextSizeCheck" />
 
-                <TextView
+                <EditText
                     android:id="@+id/textView11"
                     android:layout_width="158dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
                     android:paddingRight="10sp"
-                    android:text="@string/sin_valor_domicilio"
+                    android:hint="@string/sin_valor_domicilio"
+                    android:textColorHint="#B0B0B0"
                     android:textAlignment="gravity"
                     android:textSize="18sp"
+                    android:minHeight="48dp"
                     tools:ignore="RtlHardcoded,RtlSymmetry,TextSizeCheck" />
 
             </LinearLayout>
@@ -309,16 +316,18 @@
                     android:textSize="20sp"
                     tools:ignore="RtlSymmetry,TextSizeCheck" />
 
-                <TextView
+                <EditText
                     android:id="@+id/textView13"
                     android:layout_width="158dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
                     android:paddingRight="10sp"
-                    android:text="@string/sin_valor_telefono"
+                    android:hint="@string/sin_valor_telefono"
+                    android:textColorHint="#B0B0B0"
                     android:textAlignment="gravity"
                     android:textSize="18sp"
+                    android:minHeight="48dp"
                     tools:ignore="RtlHardcoded,RtlSymmetry,TextSizeCheck" />
             </LinearLayout>
 
