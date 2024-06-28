@@ -109,9 +109,9 @@
     <string name="add">Agregar</string>
 
     #listaDeCuotas:
-    <string name="pagas">pagas</string>
-    <string name="impagas">impagas</string>
-    <string name="vencenHoy">vencen hoy</string>
+    <string name="pagas">Pagas</string>
+    <string name="impagas">Impagas</string>
+    <string name="vencenHoy">Vencen hoy</string>
     <string name="pagar">PAGAR</string>
 
     #PopUpDetalleActividad:
