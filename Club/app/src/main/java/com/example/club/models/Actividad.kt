@@ -4,6 +4,4 @@ data class Actividad (
     val idActividad: Int,
     val nombre: String,
     val costo: Double
-
-
 )
