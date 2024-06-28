@@ -4,6 +4,7 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import com.example.club.models.Actividad
+import com.example.club.models.persona
 
 class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION)  {
     companion object {
@@ -64,6 +65,34 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
             db.endTransaction()  // Finaliza la transacción
         }
 
+        //carga de las personas:
+        val personas = listOf(
+            persona(0,"Juan","Perez","1990-01-01", 123456789, "Calle Falsa 123", "123456789", true, true ),
+            persona(0, "Maria", "Gomez", "1985-02-15", 87654321, "Av. Siempre Viva 456", "987654321", false, false),
+            persona(0, "Romina", "Sanchez", "1987-03-19", 454564561, "Cadiz 496", "1156487846", true, true),
+        )
+        db.beginTransaction()
+        try{
+            for (persona in personas){
+                val personaValues = ContentValues().apply {
+                    put("nombre", persona.nombre)
+                    put("apellido", persona.apellido)
+                    put("fechaNac", persona.fechaNac)
+                    put("dni", persona.dni)
+                    put("domicilio", persona.domicilio)
+                    put("telefono", persona.telefono)
+                    put("isSocio", if(persona.isSocio) 1 else 0)
+                    put("aptoFisico", if(persona.aptoFisico) 1 else 0)
+                }
+                db.insert("persona", null, personaValues)
+            }
+            db.setTransactionSuccessful()
+        }catch (e: Exception){
+            e.printStackTrace()
+        }finally {
+            db.endTransaction()
+        }
+
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
@@ -107,6 +136,43 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
         }
 
         return listaActividades
+    }
+
+    fun obtenerPersonas():MutableList<persona> {
+        var listaPersonas : MutableList<persona> = ArrayList()
+        readableDatabase.use { db ->
+            val sql = "SELECT * FROM persona"
+            db.rawQuery(sql, null).use { cursor ->
+                if (cursor.moveToFirst()) {
+                    do {
+                        val idPersona = cursor.getInt(cursor.getColumnIndexOrThrow("idPersona"))
+                        val nombre = cursor.getString(cursor.getColumnIndexOrThrow("nombre"))
+                        val apellido = cursor.getString(cursor.getColumnIndexOrThrow("apellido"))
+                        val fechaNac = cursor.getString(cursor.getColumnIndexOrThrow("fechaNac"))
+                        val dni = cursor.getInt(cursor.getColumnIndexOrThrow("dni"))
+                        val domicilio = cursor.getString(cursor.getColumnIndexOrThrow("domicilio"))
+                        val telefono = cursor.getString(cursor.getColumnIndexOrThrow("telefono"))
+                        val isSocio = cursor.getInt(cursor.getColumnIndexOrThrow("isSocio")) == 1
+                        val aptoFisico =
+                            cursor.getInt(cursor.getColumnIndexOrThrow("aptoFisico")) == 1
+
+                        val persona = persona(
+                            idPersona,
+                            nombre,
+                            apellido,
+                            fechaNac,
+                            dni,
+                            domicilio,
+                            telefono,
+                            isSocio,
+                            aptoFisico
+                        )
+                        listaPersonas.add(persona)
+                    } while (cursor.moveToNext())
+                }
+            }
+        }
+        return listaPersonas
     }
 
 
