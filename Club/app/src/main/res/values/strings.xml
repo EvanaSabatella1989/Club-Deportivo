@@ -17,16 +17,16 @@
     #crearUsuarioActivity:
     <string name="llave_nombre">Nombre</string>
     <string name="valor_nombre">Javier Rodriguez</string>
-    <string name="sin_valor_nombre">nombre y Apellido</string>
+    <string name="sin_valor_nombre">Nombre</string>
     <string name="llave_apellido">Apellido</string>
     <string name="valor_apellido">Javier Rodriguez</string>
     <string name="sin_valor_apellido">Apellido</string>
     <string name="llave_socio">Socio</string>
     <string name="valor_socio">Activo</string>
     <string name="llave_fechaNac">Fecha de Nacimiento</string>
-    <string name="valor_fechaNac">01/01/1990</string>
+    <string name="valor_fechaNac">dd/mm/aaaa</string>
     <string name="llave_domicilio">Domicilio</string>
-    <string name="valor_domicilio">Av.Córdoba 4253, CABA</string>
+    <string name="valor_domicilio">calle, n°, localidad</string>
     <string name="sin_valor_domicilio">Domicilio</string>
     <string name="llave_telefono">Teléfono</string>
     <string name="valor_telefono">+54 1123456789</string>
