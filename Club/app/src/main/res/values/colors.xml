@@ -6,4 +6,6 @@
     <color name="grey">#D9D9D9</color>
     <color name="dark_grey">#2D2D2D</color>
     <color name="light_grey">#878787</color>
+    <color name="button_enabled_color">#F29A2E</color>
+    <color name="button_disabled_color">#878787</color>
 </resources>
