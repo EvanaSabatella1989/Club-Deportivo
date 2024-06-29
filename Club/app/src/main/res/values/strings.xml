@@ -94,7 +94,7 @@
     <string name="llave_dni">D.N.I.:</string>
     <string name="boton_imprimir">IMPRIMIR</string>
 
-
+    <string name="mas">+</string>
     #ArrayPagoEfectivo
     <string-array name="cuotas_array">
         <item> 1 cuota </item>
@@ -122,4 +122,6 @@
     <string name="jueves">Jueves</string>
     <string name="viernes">Viernes</string>
     <string name="sabado">Sabado</string>
+
+
 </resources>
