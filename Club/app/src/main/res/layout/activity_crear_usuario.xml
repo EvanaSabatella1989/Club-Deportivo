@@ -245,6 +245,8 @@
                     android:textAlignment="gravity"
                     android:textSize="18sp"
                     android:minHeight="48dp"
+                    android:inputType="number"
+                    android:maxLength="10"
                     tools:ignore="RtlHardcoded,RtlSymmetry,TextSizeCheck" />
 
             </LinearLayout>

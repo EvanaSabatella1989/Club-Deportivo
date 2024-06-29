@@ -2,6 +2,8 @@ package com.example.club
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
@@ -44,6 +46,19 @@ class CrearUsuario : AppCompatActivity() {
         EditTextTelefono = findViewById(R.id.EditTextTelefono)
         btnAgregar = findViewById(R.id.btnAgregarUsuario)
 
+        EditTextFechaNac.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                val input = s.toString()
+                if (!input.matches(Regex("^\\d{0,4}-?\\d{0,2}-?\\d{0,2}$"))) {
+                    EditTextFechaNac.error = "Formato incorrecto. Use aaaa-mm-dd"
+                }
+            }
+
+            override fun afterTextChanged(s: Editable?) {}
+        })
+
         btnAgregar.setOnClickListener{
             val nombre = EditTextNombre.text.toString()
             val apellido = EditTextApellido.text.toString()
@@ -52,6 +67,11 @@ class CrearUsuario : AppCompatActivity() {
             val fechaNac = EditTextFechaNac.text.toString()
             val domicilio = EditTextDomicilio.text.toString()
             val telefono = EditTextTelefono.text.toString()
+
+            if (!fechaNac.matches(Regex("^\\d{4}-\\d{2}-\\d{2}$"))) {
+                Toast.makeText(this, "Formato de fecha de nacimiento incorrecto. Use aaaa-mm-dd", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
             //crear funcion para buscar persona por dni si esta en la bd no permitir la carga
             dbHelper.insertarPersona(nombre,apellido,fechaNac,dni,domicilio,telefono,isSocio,false)
