@@ -101,29 +101,28 @@ class CrearUsuario : AppCompatActivity() {
             val telefono = EditTextTelefono.text.toString()
 
 
-            if (!fechaNac.matches(Regex("^\\d{4}-\\d{2}-\\d{2}$"))) {
-                Toast.makeText(this, "Formato de fecha de nacimiento incorrecto. Use aaaa-mm-dd", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
-            }
+
 
 
             if (dbHelper.validarCamposCompletos(nombre, apellido, fechaNac, dni, domicilio, telefono)){
-            //crear funcion para buscar persona por dni si esta en la bd no permitir la carga
-                val existe = dbHelper.personaExiste(dni)
-                if(!existe){
-
-                    dbHelper.insertarPersona(nombre,apellido,fechaNac,dni,domicilio,telefono,isSocio,false)
-                    if(isSocio){
-                        val intent: Intent = Intent(this, CarnetActivity::class.java)
-                        startActivity(intent)
-                    }
-
-                    Toast.makeText(this, "La persona fue cargada exitosamente", Toast.LENGTH_SHORT).show()
+                if (!fechaNac.matches(Regex("^\\d{4}-\\d{2}-\\d{2}$"))) {
+                    Toast.makeText(this, "Formato de fecha de nacimiento incorrecto. Use aaaa-mm-dd", Toast.LENGTH_SHORT).show()
                 }else{
-                    Toast.makeText(this, "La persona ya se encuentra registrada", Toast.LENGTH_SHORT).show()
-                    //val intent: Intent = Intent(this, ListaUsuarios::class.java)
-                    //startActivity(intent)
+                    //crear funcion para buscar persona por dni si esta en la bd no permitir la carga
+                    val existe = dbHelper.personaExiste(dni)
+                    if(!existe){
+
+                        dbHelper.insertarPersona(nombre,apellido,fechaNac,dni,domicilio,telefono,isSocio,false)
+
+                        val intent: Intent = Intent(this, ListaUsuarios::class.java)
+                        startActivity(intent)
+                        Toast.makeText(this, "La persona fue cargada exitosamente", Toast.LENGTH_SHORT).show()
+                    }else{
+                        Toast.makeText(this, "La persona ya se encuentra registrada", Toast.LENGTH_SHORT).show()
+
+                    }
                 }
+
             }else{
                 Toast.makeText(this, "Por favor, completa todos los campos.", Toast.LENGTH_SHORT).show();
             }
