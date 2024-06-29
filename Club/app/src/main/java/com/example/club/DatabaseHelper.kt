@@ -175,6 +175,26 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
         return listaPersonas
     }
 
+    fun insertarPersona( nombre: String, apellido: String, fechaNac: String, dni: Int, domicilio: String, telefono: String, isSocio: Boolean, aptoFisico: Boolean):String{
+        val db = this.writableDatabase
+        val personaValues = ContentValues().apply {
+            put("nombre", nombre)
+            put("apellido", apellido)
+            put("fechaNac", fechaNac)
+            put("dni", dni)
+            put("domicilio", domicilio)
+            put("telefono", telefono)
+            put("isSocio", if(isSocio) 1 else 0)
+            put("aptoFisico", if(aptoFisico) 1 else 0)
+        }
+        var resultado = db.insert("persona", null, personaValues)
+        if(resultado == -1.toLong()){
+            return "La persona fue cargada exitosamente"
+        }else{
+            return "Hubo un error en la carga de los datos"
+        }
+    }
+
 
 
 }
