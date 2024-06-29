@@ -111,8 +111,11 @@
     #listaDeCuotas:
     <string name="pagas">pagas</string>
     <string name="impagas">impagas</string>
+    <string name="pagada">PAGA</string>
+    <string name="impaga">IMPAGA</string>
     <string name="vencenHoy">vencen hoy</string>
     <string name="pagar">PAGAR</string>
+    <string name="ver">VER</string>
 
     #PopUpDetalleActividad:
     <string name="karate">Karate</string>
