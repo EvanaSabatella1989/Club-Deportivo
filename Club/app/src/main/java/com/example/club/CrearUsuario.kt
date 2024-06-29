@@ -46,18 +46,50 @@ class CrearUsuario : AppCompatActivity() {
         EditTextTelefono = findViewById(R.id.EditTextTelefono)
         btnAgregar = findViewById(R.id.btnAgregarUsuario)
 
-        EditTextFechaNac.addTextChangedListener(object : TextWatcher {
+        val textWatcher = object : TextWatcher {
+            private var isFormatting: Boolean = false
+            private val maxLength = 10 // Longitud máxima del texto (aaaa-mm-dd)
+
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                val input = s.toString()
-                if (!input.matches(Regex("^\\d{0,4}-?\\d{0,2}-?\\d{0,2}$"))) {
-                    EditTextFechaNac.error = "Formato incorrecto. Use aaaa-mm-dd"
+                if (isFormatting) return
+
+                val clean = s.toString().replace("-", "")
+
+                val formatted = when {
+                    clean.length >= 4 && clean.length < 6 -> {
+                        isFormatting = true
+                        clean.substring(0, 4) + "-" + clean.substring(4)
+                    }
+                    clean.length >= 6 -> {
+                        isFormatting = true
+                        clean.substring(0, 4) + "-" + clean.substring(4, 6) + "-" + clean.substring(6)
+                    }
+                    else -> clean
                 }
+
+                EditTextFechaNac.removeTextChangedListener(this)
+                EditTextFechaNac.setText(formatted)
+                EditTextFechaNac.setSelection(formatted.length)
+                EditTextFechaNac.addTextChangedListener(this)
+                isFormatting = false
             }
 
             override fun afterTextChanged(s: Editable?) {}
-        })
+        }
+
+        EditTextFechaNac.addTextChangedListener(textWatcher)
+
+        EditTextFechaNac.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                // Validar el formato de la fecha cuando pierde el foco
+                val input = EditTextFechaNac.text.toString()
+                if (!input.matches(Regex("^\\d{4}-\\d{2}-\\d{2}$"))) {
+                    EditTextFechaNac.error = "Formato incorrecto. Use aaaa-mm-dd"
+                }
+            }
+        }
 
         btnAgregar.setOnClickListener{
             val nombre = EditTextNombre.text.toString()
