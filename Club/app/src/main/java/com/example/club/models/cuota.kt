@@ -6,6 +6,6 @@ data class cuota (
     val monto: Double,
     val fechaVencimiento: String,
     val periodo: String,
-    val medioPago: String,
+    val medioPago: String?,
     val fechaEmision: String
 )

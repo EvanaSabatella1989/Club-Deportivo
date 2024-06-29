@@ -4,6 +4,8 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import com.example.club.models.Actividad
+import com.example.club.models.cuota
+import com.example.club.models.cuotaPersona
 import com.example.club.models.persona
 
 class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION)  {
@@ -92,6 +94,35 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
         }finally {
             db.endTransaction()
         }
+        //carga de las cuotas:
+        val cuotas = listOf(
+            cuota(0, 1,20500.00,"26-10-2024","mayo-24","efectivo","25-04-24"),
+            cuota(0, 2,26500.00,"26-12-2024","junio-24","tarjeta ","28-03-24"),
+            cuota(0, 3,29500.00,"29-06-2024","abril-24",null,"15-02-24"),
+            cuota(0, 2,20500.00,"29-10-2024","mayo-24",null,"25-04-24"),
+            cuota(0, 2,26500.00,"26-12-2024","junio-24","billeteraV","28-03-24"),
+
+        )
+        db.beginTransaction()
+        try {
+            for (cuota in cuotas) {
+                val cuotaValues = ContentValues().apply {
+                    put("idPersona", cuota.idPersona)
+                    put("monto", cuota.monto)
+                    put("fechaVencimiento", cuota.fechaVencimiento)
+                    put("periodo", cuota.periodo)
+                    put("medioPago", cuota.medioPago)
+                    put("fechaEmision", cuota.fechaEmision)
+                }
+                db.insert("cuota", null, cuotaValues)
+            }
+            db.setTransactionSuccessful()  // Marca la transacción como exitosa
+        } catch (e: Exception) {
+            // Manejo de errores
+            e.printStackTrace()
+        } finally {
+            db.endTransaction()  // Finaliza la transacción
+        }
 
     }
 
@@ -174,7 +205,43 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
         }
         return listaPersonas
     }
+    fun obtenerCuotaPersona():MutableList<cuotaPersona> {
+        var listaCuotaP: MutableList<cuotaPersona> = ArrayList()
+        readableDatabase.use { db ->
+            val sql = "SELECT nombre, apellido, dni,isSocio,monto,fechaVencimiento,periodo,medioPago,fechaEmision  FROM persona as p join cuota as c where p.idPersona= c.idPersona"
+            db.rawQuery(sql, null).use { cursor ->
+                if (cursor.moveToFirst()) {
+                    do {
+                        val nombre = cursor.getString(cursor.getColumnIndexOrThrow("nombre"))
+                        val apellido = cursor.getString(cursor.getColumnIndexOrThrow("apellido"))
+                        val dni = cursor.getInt(cursor.getColumnIndexOrThrow("dni"))
+                        val isSocio = cursor.getInt(cursor.getColumnIndexOrThrow("isSocio")) == 1
+                        val monto = cursor.getString(cursor.getColumnIndexOrThrow("monto"))
+                        val fechaVencimiento = cursor.getString(cursor.getColumnIndexOrThrow("fechaVencimiento"))
+                        val periodo = cursor.getString(cursor.getColumnIndexOrThrow("periodo"))
+                        val medioPago = cursor.getString(cursor.getColumnIndexOrThrow("medioPago"))
+                        val fechaEmision = cursor.getString(cursor.getColumnIndexOrThrow("fechaEmision"))
 
+                        val cuotaPersona = cuotaPersona(
+
+                            nombre,
+                            apellido,
+                            dni,
+                            isSocio,
+                            monto,
+                            fechaVencimiento,
+                            periodo,
+                            medioPago,
+                            fechaEmision
+                        )
+                        listaCuotaP.add(cuotaPersona)
+                    } while (cursor.moveToNext())
+                }
+            }
+        }
+        return listaCuotaP
+    }
+    
     fun insertarPersona( nombre: String, apellido: String, fechaNac: String, dni: Int, domicilio: String, telefono: String, isSocio: Boolean, aptoFisico: Boolean):String{
         val db = this.writableDatabase
         val personaValues = ContentValues().apply {
@@ -194,6 +261,7 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
             return "Hubo un error en la carga de los datos"
         }
     }
+
 
 
 
