@@ -3,10 +3,12 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.text.TextUtils
 import com.example.club.models.Actividad
 import com.example.club.models.cuota
 import com.example.club.models.cuotaPersona
 import com.example.club.models.persona
+
 
 class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION)  {
     companion object {
@@ -242,7 +244,7 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
         return listaCuotaP
     }
     
-    fun insertarPersona( nombre: String, apellido: String, fechaNac: String, dni: Int, domicilio: String, telefono: String, isSocio: Boolean, aptoFisico: Boolean):String{
+    fun insertarPersona( nombre: String, apellido: String, fechaNac: String, dni: String, domicilio: String, telefono: String, isSocio: Boolean, aptoFisico: Boolean):String{
         val db = this.writableDatabase
         val personaValues = ContentValues().apply {
             put("nombre", nombre)
@@ -262,7 +264,33 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
         }
     }
 
+    fun personaExiste(dniPersona: String): Boolean {
+        val db = this.readableDatabase
+        val cursor = db.query(
+            "persona", arrayOf<String>("dni"),
+            "dni" + " = ?", arrayOf<String>(dniPersona),
+            null, null, null
+        )
+        val existe = cursor.count > 0
+        cursor.close()
+        db.close()
+        return existe
+    }
 
-
+    fun validarCamposCompletos(
+        nombre: String?,
+        apellido: String?,
+        fechaNac: String?,
+        dni: String?,
+        domicilio: String?,
+        telefono: String?
+    ): Boolean {
+        return !TextUtils.isEmpty(nombre) &&
+                !TextUtils.isEmpty(apellido) &&
+                !TextUtils.isEmpty(fechaNac) &&
+                !TextUtils.isEmpty(dni) &&
+                !TextUtils.isEmpty(domicilio) &&
+                !TextUtils.isEmpty(telefono)
+    }
 
 }
