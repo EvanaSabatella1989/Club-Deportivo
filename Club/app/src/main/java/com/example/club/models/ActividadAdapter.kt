@@ -34,8 +34,7 @@ class ActividadAdapter(private val actividades: MutableList<Actividad>) :
     override fun onBindViewHolder(holder: ActividadViewHolder, position: Int) {
         val actividad = actividades[position]
         holder.textViewNombreActividad.text = actividad.nombre
-        holder.textViewCostoActividad.text = actividad.costo.toString()
-        // Aquí podrías manejar la imagen de la actividad si tienes distintas
+        holder.textViewCostoActividad.text = "$${actividad.costo.toInt()}"
         holder.imageViewActividad.setImageResource(R.mipmap.icon_actividad)
 
         holder.btnSeleccionar.setOnClickListener {
