@@ -41,6 +41,7 @@ class ActividadAdapter(private val actividades: MutableList<Actividad>) :
         holder.btnSeleccionar.setOnClickListener {
             val context = holder.itemView.context
             val intent = Intent(context, PagoNoSocioActivity::class.java)
+            intent.putExtra("precio", actividad.costo)
             context.startActivity(intent)
         }
     }
