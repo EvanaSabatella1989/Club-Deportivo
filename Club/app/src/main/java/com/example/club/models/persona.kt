@@ -5,7 +5,7 @@ data class persona (
         val nombre: String,
         val apellido: String,
         val fechaNac: String,
-        val dni: Int,
+        val dni: String,
         val domicilio: String,
         val telefono: String,
         val isSocio: Boolean,

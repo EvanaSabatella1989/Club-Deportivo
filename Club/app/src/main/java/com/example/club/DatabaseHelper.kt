@@ -71,9 +71,9 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
 
         //carga de las personas:
         val personas = listOf(
-            persona(0,"Juan","Perez","1990-01-01", 123456789, "Calle Falsa 123", "123456789", true, true ),
-            persona(0, "Maria", "Gomez", "1985-02-15", 87654321, "Av. Siempre Viva 456", "987654321", false, false),
-            persona(0, "Romina", "Sanchez", "1987-03-19", 454564561, "Cadiz 496", "1156487846", true, true),
+            persona(0,"Juan","Perez","1990-01-01", "123456789", "Calle Falsa 123", "123456789", true, true ),
+            persona(0, "Maria", "Gomez", "1985-02-15", "87654321", "Av. Siempre Viva 456", "987654321", false, false),
+            persona(0, "Romina", "Sanchez", "1987-03-19", "454564561", "Cadiz 496", "1156487846", true, true),
         )
         db.beginTransaction()
         try{
@@ -182,7 +182,7 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
                         val nombre = cursor.getString(cursor.getColumnIndexOrThrow("nombre"))
                         val apellido = cursor.getString(cursor.getColumnIndexOrThrow("apellido"))
                         val fechaNac = cursor.getString(cursor.getColumnIndexOrThrow("fechaNac"))
-                        val dni = cursor.getInt(cursor.getColumnIndexOrThrow("dni"))
+                        val dni = cursor.getString(cursor.getColumnIndexOrThrow("dni"))
                         val domicilio = cursor.getString(cursor.getColumnIndexOrThrow("domicilio"))
                         val telefono = cursor.getString(cursor.getColumnIndexOrThrow("telefono"))
                         val isSocio = cursor.getInt(cursor.getColumnIndexOrThrow("isSocio")) == 1
