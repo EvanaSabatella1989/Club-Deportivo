@@ -12,9 +12,12 @@ class BilleterasVirtuales : AppCompatActivity() {
 
 
         var itemMp: LinearLayout = findViewById(R.id.itemMp)
-
+        val idCuota= intent.getIntExtra("idCuota",0)
         itemMp.setOnClickListener {
-            val intent: Intent = Intent(this, DetalleBilleteraActivity::class.java)
+
+            val intent = Intent(this,DetalleBilleteraActivity::class.java).apply {
+                putExtra("idCuota", idCuota)
+            }
             startActivity(intent)
         }
     }

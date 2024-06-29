@@ -76,6 +76,7 @@ import com.example.club.models.cuotaPersona
         button.setOnClickListener {
             if (button.isEnabled) {
                 val intent = Intent(context, SeleccionFomaPagoActivity::class.java).apply {
+                    putExtra("idCuota", quotaPersona.idCuota)
                     putExtra("monto", quotaPersona.monto)
                     putExtra("periodo", quotaPersona.periodo)
                 }
