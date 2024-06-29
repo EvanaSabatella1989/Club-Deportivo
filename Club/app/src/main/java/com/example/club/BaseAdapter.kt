@@ -66,11 +66,18 @@ import com.example.club.models.cuotaPersona
         val quotaPersona = arrayList[position]
 
         binding.fecha1.text = quotaPersona.fechaVencimiento
-        binding.estado1.text = "$ ${quotaPersona.monto}"
-        binding.Nombresocio.text = "${quotaPersona.nombre} ${quotaPersona.apellido}"
+        var estado = binding.estado1
+        estado.text = "$ ${quotaPersona.monto}"
+
+        var nombreSocio = binding.Nombresocio
+        nombreSocio.text = "${quotaPersona.nombre} ${quotaPersona.apellido}"
+        nombreSocio.layoutParams.width = 400
+
         binding.periodo.text = quotaPersona.periodo
 
         val button = binding.btnPagar
+        button.layoutParams.height = 38
+
         button.isEnabled = quotaPersona.medioPago==null
 
         button.setOnClickListener {

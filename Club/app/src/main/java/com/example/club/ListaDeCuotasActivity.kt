@@ -59,11 +59,8 @@ class ListaDeCuotasActivity : AppCompatActivity() {
                 checkBoxPag.isChecked=false
 
                 val formatter =DateTimeFormatter.ofPattern("dd-MM-yyyy")
-
                 val fechaHoy = LocalDate.now().format(formatter)
-
                 var CuotasVencHoy:ArrayList<cuotaPersona> =ArrayList( Cuotas.filter { (it.fechaVencimiento== fechaHoy.toString()) and ( it.medioPago==null) })
-
                 var adapter= BaseAdapter(this,CuotasVencHoy)
                 binding.listaCuotas.adapter  =adapter
             }else{

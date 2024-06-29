@@ -9,7 +9,7 @@
         android:id="@+id/icon_usuario"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:src="@mipmap/socio_color" />
+        android:src="@mipmap/icon_tarjeta" />
 
     <LinearLayout
         android:layout_width="0dp"

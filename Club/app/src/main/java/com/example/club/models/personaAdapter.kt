@@ -20,7 +20,7 @@ class personaAdapter (
         holder.nombreApellidoTextView.text = "${persona.nombre} ${persona.apellido}"
         holder.estadoTextView.text = if (persona.isSocio) "Socio" else "No Socio"
         holder.iconoImageView.setImageResource(
-            if (persona.isSocio) R.mipmap.socio_color else R.mipmap.no_socio_sincolor
+            if (persona.isSocio) R.mipmap.icono_persona_socio else R.mipmap.icono_persona
         )
         // Configura el click listener
         holder.itemView.setOnClickListener {
