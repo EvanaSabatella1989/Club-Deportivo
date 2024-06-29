@@ -94,6 +94,11 @@
     <string name="llave_dni">D.N.I.:</string>
     <string name="boton_imprimir">IMPRIMIR</string>
 
+    <string name="mas">+</string>
+
+    #PagoNoSocio
+    <string name="valor_importe_final_actividad">%s</string>
+    <string name="label_pagar_actividad">Pagar actividad</string>
 
     #ArrayPagoEfectivo
     <string-array name="cuotas_array">
@@ -122,4 +127,6 @@
     <string name="jueves">Jueves</string>
     <string name="viernes">Viernes</string>
     <string name="sabado">Sabado</string>
+
+
 </resources>
