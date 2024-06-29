@@ -96,9 +96,11 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
         }
         //carga de las cuotas:
         val cuotas = listOf(
-            cuota(0, 1,20500.00,"26-10-2024","mayo-24"," ","25-04-24"),
-            cuota(0, 2,26500.00,"26-12-2024","junio-24"," ","28-03-24"),
-            cuota(0, 3,29500.00,"26-07-2024","abril-24"," ","15-02-24")
+            cuota(0, 1,20500.00,"26-10-2024","mayo-24","efectivo","25-04-24"),
+            cuota(0, 2,26500.00,"26-12-2024","junio-24","tarjeta ","28-03-24"),
+            cuota(0, 3,29500.00,"29-06-2024","abril-24",null,"15-02-24"),
+            cuota(0, 2,20500.00,"29-10-2024","mayo-24",null,"25-04-24"),
+            cuota(0, 2,26500.00,"26-12-2024","junio-24","billeteraV","28-03-24"),
 
         )
         db.beginTransaction()
@@ -206,7 +208,7 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
     fun obtenerCuotaPersona():MutableList<cuotaPersona> {
         var listaCuotaP: MutableList<cuotaPersona> = ArrayList()
         readableDatabase.use { db ->
-            val sql = "SELECT nombre, apellido, dni,isSocio,monto,fechaVencimiento,periodo,fechaEmision  FROM persona as p join cuota as c where p.idPersona= c.idPersona"
+            val sql = "SELECT nombre, apellido, dni,isSocio,monto,fechaVencimiento,periodo,medioPago,fechaEmision  FROM persona as p join cuota as c where p.idPersona= c.idPersona"
             db.rawQuery(sql, null).use { cursor ->
                 if (cursor.moveToFirst()) {
                     do {
@@ -218,6 +220,7 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
                         val monto = cursor.getString(cursor.getColumnIndexOrThrow("monto"))
                         val fechaVencimiento = cursor.getString(cursor.getColumnIndexOrThrow("fechaVencimiento"))
                         val periodo = cursor.getString(cursor.getColumnIndexOrThrow("periodo"))
+                        val medioPago = cursor.getString(cursor.getColumnIndexOrThrow("medioPago"))
                         val fechaEmision = cursor.getString(cursor.getColumnIndexOrThrow("fechaEmision"))
 
                         val cuotaPersona = cuotaPersona(
@@ -229,6 +232,7 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
                             monto,
                             fechaVencimiento,
                             periodo,
+                            medioPago,
                             fechaEmision
                         )
                         listaCuotaP.add(cuotaPersona)

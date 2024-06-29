@@ -8,5 +8,6 @@ data class cuotaPersona (
     val monto: String,
     val fechaVencimiento: String,
     val periodo: String,
+    val medioPago : String ?,
     val fechaEmision: String
 )

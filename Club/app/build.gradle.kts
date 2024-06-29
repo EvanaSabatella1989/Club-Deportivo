@@ -6,13 +6,15 @@ plugins {
 android {
     namespace = "com.example.club"
     compileSdk = 34
-buildFeatures{
-    viewBinding=true
 
-}
+
+    buildFeatures{
+     viewBinding=true
+
+    }
     defaultConfig {
         applicationId = "com.example.club"
-        minSdk = 23
+        minSdk = 28
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
