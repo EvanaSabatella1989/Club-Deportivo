@@ -95,11 +95,7 @@
             android:name=".InicioActivity"
             android:exported="true"
             android:theme="@style/Theme.Club.NoTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ABMActividadesActivity"
@@ -111,9 +107,14 @@
             android:parentActivityName=".MenuPrincipalActivity"/>
 
         <activity android:name=".MenuPrincipalActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Club.NoTheme"/>
+            android:exported="true"
+            android:theme="@style/Theme.Club.NoTheme">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".CrearUsuario"
             android:exported="false"
             android:parentActivityName=".MenuPrincipalActivity"/>

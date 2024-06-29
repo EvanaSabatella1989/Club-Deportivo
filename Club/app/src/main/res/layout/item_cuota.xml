@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10sp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/cuota1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/rayo" />
+    <!--
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:orientation="vertical"
+        android:paddingStart="15dp">
+
+        <TextView
+            android:id="@+id/Nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Socio:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/periodo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Periodo:"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="15dp">
+
+        <TextView
+            android:id="@+id/Nombresocio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Juan"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/periodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marzo-24"
+            android:textColor="@android:color/holo_red_dark" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:orientation="vertical"
+        android:paddingStart="0dp">
+
+        <TextView
+            android:id="@+id/fecha1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="04-2024"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/estado1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IMPAGA"
+            android:textColor="@android:color/holo_red_dark" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnPagar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/boton_pequenio"
+        android:fontFamily="@font/roboto"
+        android:text="@string/pagar"
+        android:textColor="@color/white" />
+</LinearLayout>
