@@ -1,11 +1,14 @@
 package com.example.club.models
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.club.PagoNoSocioActivity
 import com.example.club.R
 import com.example.club.models.Actividad
 
@@ -17,7 +20,7 @@ class ActividadAdapter(private val actividades: MutableList<Actividad>) :
         val imageViewActividad: ImageView = view.findViewById(R.id.imageViewActividad)
         val textViewNombreActividad: TextView = view.findViewById(R.id.textViewNombreActividad)
         val textViewCostoActividad: TextView = view.findViewById(R.id.textViewCostoActividad)
-        val checkBoxSeleccionar: CheckBox = view.findViewById(R.id.checkBoxSeleccionar)
+        val btnSeleccionar: Button = view.findViewById(R.id.btnSeleccionar)
     }
 
     // Infla el layout para cada elemento
@@ -31,14 +34,14 @@ class ActividadAdapter(private val actividades: MutableList<Actividad>) :
     override fun onBindViewHolder(holder: ActividadViewHolder, position: Int) {
         val actividad = actividades[position]
         holder.textViewNombreActividad.text = actividad.nombre
-        holder.textViewCostoActividad.text = actividad.costo.toString()
-        // Aquí podrías manejar la imagen de la actividad si tienes distintas
+        holder.textViewCostoActividad.text = "$${actividad.costo.toInt()}"
         holder.imageViewActividad.setImageResource(R.mipmap.icon_actividad)
 
-        // Maneja la selección del CheckBox (esto depende de tu lógica)
-        holder.checkBoxSeleccionar.setOnCheckedChangeListener { _, isChecked ->
-            // Aquí puedes manejar la selección del checkbox
-            // Por ejemplo, puedes agregar la actividad a una lista de seleccionadas
+        holder.btnSeleccionar.setOnClickListener {
+            val context = holder.itemView.context
+            val intent = Intent(context, PagoNoSocioActivity::class.java)
+            intent.putExtra("precio", actividad.costo)
+            context.startActivity(intent)
         }
     }
 

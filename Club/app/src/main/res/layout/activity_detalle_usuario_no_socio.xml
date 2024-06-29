@@ -91,7 +91,7 @@
                     tools:ignore="RtlSymmetry,TextSizeCheck" />
 
                 <TextView
-                    android:id="@+id/textViewFechaNac"
+                    android:id="@+id/EditTextNombre"
                     android:layout_width="133dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -171,7 +171,7 @@
                     tools:ignore="RtlSymmetry,TextSizeCheck" />
 
                 <TextView
-                    android:id="@+id/textViewTelefono"
+                    android:id="@+id/EditTextFechaNac"
                     android:layout_width="158dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -211,7 +211,7 @@
                     tools:ignore="RtlSymmetry,TextSizeCheck" />
 
                 <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/EditTextDomicilio"
                     android:layout_width="158dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -274,7 +274,7 @@
                     tools:ignore="RtlSymmetry,TextSizeCheck" />
 
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/EditTextTelefono"
                     android:layout_width="158dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -339,7 +339,7 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <Button
-                    android:id="@+id/btnModificar"
+                    android:id="@+id/btnAgregarUsuario"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/boton_grande"
@@ -347,7 +347,7 @@
                     android:textColor="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btnModificar" />
+                    app:layout_constraintTop_toBottomOf="@+id/btnAgregarUsuario" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
