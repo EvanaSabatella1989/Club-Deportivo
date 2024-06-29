@@ -210,10 +210,10 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
     fun obtenerCuotaPersona():MutableList<cuotaPersona> {
         var listaCuotaP: MutableList<cuotaPersona> = ArrayList()
         readableDatabase.use { db ->
-            val sql = "SELECT nombre, apellido, dni,isSocio,monto,fechaVencimiento,periodo,medioPago,fechaEmision  FROM persona as p join cuota as c where p.idPersona= c.idPersona"
+            val sql = "SELECT idCuota,nombre, apellido, dni,isSocio,monto,fechaVencimiento,periodo,medioPago,fechaEmision  FROM persona as p join cuota as c where p.idPersona= c.idPersona"
             db.rawQuery(sql, null).use { cursor ->
                 if (cursor.moveToFirst()) {
-                    do {
+                    do { val idCuota=cursor.getInt(cursor.getColumnIndexOrThrow("idCuota"))
                         val nombre = cursor.getString(cursor.getColumnIndexOrThrow("nombre"))
                         val apellido = cursor.getString(cursor.getColumnIndexOrThrow("apellido"))
                         val dni = cursor.getInt(cursor.getColumnIndexOrThrow("dni"))
@@ -225,7 +225,7 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
                         val fechaEmision = cursor.getString(cursor.getColumnIndexOrThrow("fechaEmision"))
 
                         val cuotaPersona = cuotaPersona(
-
+                            idCuota,
                             nombre,
                             apellido,
                             dni,
@@ -259,6 +259,24 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
         var resultado = db.insert("persona", null, personaValues)
         if(resultado == -1.toLong()){
             return "La persona fue cargada exitosamente"
+        }else{
+            return "Hubo un error en la carga de los datos"
+        }
+    }
+
+    fun pagarCuota( idCuota:Int, medioPago: String,):String{
+        val db = this.writableDatabase
+        val cuotaValues = ContentValues().apply {
+            put("medioPago", medioPago)
+
+        }
+        val selection = "idCuota = ?"
+        val selectionArgs = arrayOf(idCuota.toString())
+
+        var resultado = db.update("cuota",  cuotaValues,selection,selectionArgs)
+
+        if(resultado >0){
+            return "La cuota fue cargada exitosamente"
         }else{
             return "Hubo un error en la carga de los datos"
         }

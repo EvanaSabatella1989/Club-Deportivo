@@ -1,6 +1,7 @@
 package com.example.club.models
 
 data class cuotaPersona (
+    val idCuota:Int,
     val nombre: String,
     val apellido: String,
     val dni: Int,
