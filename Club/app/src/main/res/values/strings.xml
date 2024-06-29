@@ -24,7 +24,7 @@
     <string name="llave_socio">Socio</string>
     <string name="valor_socio">Activo</string>
     <string name="llave_fechaNac">Fecha de Nacimiento</string>
-    <string name="valor_fechaNac">dd/mm/aaaa</string>
+    <string name="valor_fechaNac">aaaa-mm-dd</string>
     <string name="llave_domicilio">Domicilio</string>
     <string name="valor_domicilio">calle, n°, localidad</string>
     <string name="sin_valor_domicilio">Domicilio</string>
