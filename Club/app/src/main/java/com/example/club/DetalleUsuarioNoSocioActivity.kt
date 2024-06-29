@@ -20,9 +20,9 @@ class DetalleUsuarioNoSocioActivity : AppCompatActivity() {
         val aptoFisico = intent.getStringExtra("aptoFisico") ?: "N/A"
 
         findViewById<TextView>(R.id.textViewNombre).text = nombre + " " + apellido
-        findViewById<TextView>(R.id.textViewFechaNac).text = fechaNac
+        findViewById<TextView>(R.id.EditTextNombre).text = fechaNac
         findViewById<TextView>(R.id.textViewDomicilio).text = domicilio
-        findViewById<TextView>(R.id.textViewTelefono).text = "+54 " +  telefono
+        findViewById<TextView>(R.id.EditTextFechaNac).text = "+54 " +  telefono
 
         val btnNuevaActividad: Button = findViewById(R.id.btnNuevaActividad)
 
@@ -31,7 +31,7 @@ class DetalleUsuarioNoSocioActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val btnModificar: Button = findViewById(R.id.btnModificar)
+        val btnModificar: Button = findViewById(R.id.btnAgregarUsuario)
 
         btnModificar.setOnClickListener {
             val intent: Intent = Intent(this, modificar_usuario_nosocio_Activity::class.java)
